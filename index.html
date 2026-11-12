@@ -1,134 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Css/style.css">
-    <link rel="icon" href="Materials/ic0.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kirollos Magdy</title>
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://kiromagdy.com/" />
+<meta http-equiv="refresh" content="3;url=https://kiromagdy.com/" />
+<style>
+  :root {
+    --accent: #2563EB;
+    --bg: #0A0A0A;
+    --surface: #141414;
+    --text: #F5F5F5;
+    --muted: #8A8A8A;
+    --border: #262626;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .label {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    margin-bottom: 16px;
+    display: block;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  p strong { color: var(--text); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+  }
+  .btn:hover { opacity: 0.88; }
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 24px;
+  }
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes pulse {
+    0%, 100% { opacity: 0.25; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dot { animation: none; opacity: 0.6; }
+  }
+</style>
 </head>
-
 <body>
-    <header>
-        <nav class="nav-bar">
-            <button onclick="scrollToSection('about')">About</button>
-            <button onclick="scrollToSection('projects')">Projects</button>
-            <button onclick="scrollToSection('skills')">Skills</button>
-        </nav>
-    </header>
-    <main class="main-container" id="about">
-        <section class="main-section1">
-            <img src="Materials/mainP.png" alt="Kirollos Magdy Image">
-            <h1>Kirollos Magdy</h1>
-            <h2>Full Stack Developer</h2>
-            <p>I am Kirollos Magdy, a professional <span>Web Developer</span> based in Alexandria, Egypt.</p>
-            <p>My passion for web development started when I studied a web subject in college, and I haven't looked back since then,One year later.</p>
-            <p> am proud to say that I have completed over 20 professional projects, including e-commerce websites and portfolios.</p>
-            <p>I work with your budget to create a customized website, so don't worry about your budget.</p>
-            <p>I believe in clear communication, meeting deadlines, and delivering a final product that exceeds expectations.</p>
-            <h4>Contact Me :</h4>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/kiromagdy11?locale=ar_AR" target="_blank"><i
-                        class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/+201270200486" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/kiromagdy_7/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/kiromagdy77" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kirollos-magdy-1102a1278/" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="mailto:kiromagdy123@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <div>
-                <a href="CV/KM-CV.pdf" download target="_blank"><button class="download-resume"><i
-                            class="fa-solid fa-file-arrow-down"></i>Download Resume</button></a>
-            </div>
-        </section>
-        <section class="main-section2">
-            <img src="Materials/SVG1.svg" alt="Laptop">
-        </section>
-    </main>
-    <hr>
-    <!-- Projects Section -->
-    <section id="projects">
-        <h4 class="projects-title">Projects</h4>
-        <aside class="projects-container">
-            <span class="projects-buttons-container">
-                <button><i class="fa-solid fa-file-code"></i>All</button>
-                <button><i class="fa-brands fa-html5"></i>HTML & CSS</button>
-                <button><i class="fa-brands fa-js"></i>JavaScript</button>
-            </span>
-            <div class="projects-cards-container">
-                <!-- HTML & CSS Projects -->
-                <div class="project-card" data-category="HTML & CSS">
-                    <a href="https://kiromagdy77.github.io/KiroM-Store/" target="_blank">
-                        <img src="Materials/MakoStore P2.png" alt="Project 1" loading="lazy">
-                        <h3>MakoStore</h3>
-                        <p>HTML & CSS</p>
-                    </a>
-                </div>
-                <div class="project-card" data-category="HTML & CSS">
-                    <a href="https://kiromagdy77.github.io/Cook-Chef.KiroMagdy/" target="_blank">
-                        <img src="Materials/CookChef P1.png" alt="Project 2" loading="lazy">
-                        <h3>CookChef</h3>
-                        <p>HTML & CSS</p>
-                    </a>
-                </div>
-                <div class="project-card" data-category="HTML & CSS">
-                    <a href="https://kiromagdy77.github.io/Div-Store/" target="_blank">
-                        <img src="Materials/DivStore P3.svg" alt="Project 3" loading="lazy">
-                        <h3>DivStore</h3>
-                        <p>HTML & CSS</p>
-                    </a>
-                </div>
-                <div class="project-card" data-category="HTML & CSS">
-                    <a href="https://kiromagdy77.github.io/word-of-the.lord/" target="_blank">
-                        <img src="Materials/Wordofthelord.png" alt="Project 4" loading="lazy">
-                        <h3>Word-of-the.lord</h3>
-                        <p>HTML & CSS & JS</p>
-                    </a>
-                </div>
-                <div class="project-card" data-category="HTML & CSS">
-                    <a href="https://kiromagdy77.github.io/Code-Crate/" target="_blank">
-                        <img src="Materials/CodeCrate P5.svg" alt="Project 4" loading="lazy">
-                        <h3>CodeCrate</h3>
-                        <p>HTML & CSS & JS</p>
-                    </a>
-                </div>
-            </div>
-        </aside>
-    </section>
-    <hr>
-    <section id="skills">
-        <h3 class="skills-title">Skills</h3>
-        <h4 class="skills-text">The Skills I Have</h4>
-        <div class="skills-container">
-            <img src="Materials/Html.svg" alt="HTML" loading="lazy">
-            <img src="Materials/Css.svg" alt="CSS" loading="lazy">
-            <img src="Materials/JavaScript.svg" alt="JavaScript" loading="lazy">
-            <img src="Materials/python.svg" alt="Python" loading="lazy">
-            <img src="Materials/Java.svg" alt="Java" loading="lazy">
-            <img src="Materials/ASP.NET.svg" alt="ASP.NET" loading="lazy">
-            <img src="Materials/NetCore.svg" alt="NetCore" loading="lazy">
-            <img src="Materials/Csharp.svg" alt="C#" loading="lazy">
-            <img src="Materials/SQL.svg" alt="SQL" loading="lazy">
-        </div>
-    </section>
-    <hr>
-    <footer>
-        <h5>Designed & Developed by Kirollos Magdy</h5>
-        <p>© 2025 Kirollos Magdy. All rights reserved.</p>
-        <div class="social-icons-footer">
-            <a href="https://www.facebook.com/kiromagdy11?locale=ar_AR" target="_blank"><i
-                    class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/+201270200486" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/kiromagdy_7/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/kiromagdy77" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/kirollos-magdy-1102a1278/" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="mailto:kiromagdy123@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
+  <div class="card">
+    <span class="label">// Portfolio Moved</span>
+    <h1>This portfolio has a new home</h1>
+    <p>You're viewing an old version of my portfolio. It now lives at <strong>kiromagdy.com</strong>. Redirecting you automatically&hellip;</p>
+    <a class="btn" href="https://kiromagdy.com/">Go to kiromagdy.com →</a>
+    <div class="dots" aria-hidden="true">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
 </body>
-
 </html>
